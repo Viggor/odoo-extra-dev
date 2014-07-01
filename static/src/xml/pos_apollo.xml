@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1:
+-->
+<templates id="template" xml:space="preserve">
+
+    <t t-name="CustomernameWidget">
+        <span class="customername">
+                <t t-esc="widget.get_name()" /> <t t-esc="widget.get_first_name()" /> <t t-esc="widget.get_birth_date()" />
+        </span>
+    </t>
+
+    <t t-name="SelectCustomerPopupWidget">
+        <div class="modal-dialog">
+            <div class="popup-selection">
+                <div class="customer-title">
+                    Veuillez choisir un client.
+                </div>
+                <div class="customer-searchbox">
+                    <input placeholder="Search Customers" />
+                    <img class="customer-search-clear" src="/point_of_sale/static/src/img/search_reset.gif" />
+                </div>
+
+                <div class="content-container">
+                    <span class="placeholder-CustomerListWidget" />
+                </div>
+
+                <div id="customer-cancel" class = "button cancel">
+                    Cancel
+                </div>
+
+                <div id="customer-create" class="button create">
+                    Create
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="CreateCustomerPopupWidget">
+        <div class="modal-dialog">
+        <div class="popup-selection">
+            <div class="customer-title">
+                    Nouveau client.
+                </div>
+            <div id="customer-fields">
+                <div class="customer-label">
+                    Est une société: 
+                </div>
+                <div id="customer_is_company" class="customer-input">
+                    <input type="checkbox"/><br/>
+                </div>
+                <div class="customer-label">
+                    Nom: 
+                </div>
+                <div id="customer_name" class="customer-input">
+                    <input placeholder="Nom"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Nom de jeune fille:
+                </div>
+                <div id="customer_maiden_name" class="customer-input">
+                    <input placeholder="Nom de jeune fille"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Prénoms:
+                </div>
+                <div id="customer_first_name" class="customer-input">
+                    <input placeholder="Prénom"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Rue:
+                </div>
+                <div id="customer_street" class="customer-input">
+                    <input placeholder="Rue..."/><br/>
+                </div>
+                <div class="customer-label">
+
+                </div>
+                <div id="customer_street2" class="customer-input">
+                    <input placeholder="Rue..."/><br/>
+                </div>
+                <div class="customer-label">
+                    Code postal:
+                </div>
+                <div id="customer_zip" class="customer-input">
+                    <input placeholder="Code postal"/><br/>
+                </div>
+                <div class="customer-label">
+                    Ville:
+                </div>
+                <div id="customer_city" class="customer-input">
+                    <input placeholder="Ville"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Date de naissance:
+                </div>
+                <div id="customer_birth_date" class="customer-input">
+                    <input placeholder="Date de naissance" type="date"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Lieu de naissance:
+                </div>
+                <div id="customer_birth_location" class="customer-input">
+                    <input placeholder="Lieu naissance"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Téléphone:
+                </div>
+                <div id="customer_phone" class="customer-input">
+                    <input placeholder="Téléphone"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Mobile:
+                </div>
+                <div id="customer_mobile" class="customer-input">
+                    <input placeholder="Mobile"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    email:
+                </div>
+                <div id="customer_email" class="customer-input">
+                    <input placeholder="Email"/><br/>
+                </div>
+
+            </div>
+            <div id="customer-cancel" class = "button cancel">
+                Cancel
+            </div>
+            <div id="customer-confirm-create" class="button confirm">
+                Create
+            </div>
+        </div>
+        </div>
+    </t>
+
+    <t t-name="EditCustomerPopupWidget">
+        <div class="modal-dialog">
+        <div class="popup-selection">
+            <div class="customer-title">
+                    Infos client
+                </div>
+            <div id="customer-fields">
+                <div class="customer-label">
+                    Est une société: 
+                </div>
+                <div id="customer_is_company" class="customer-input">
+                    <input type="checkbox"/><br/>
+                </div>
+                <div class="customer-label">
+                    Nom: 
+                </div>
+                <div id="customer_name" class="customer-input">
+                    <input placeholder="Nom"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Nom de jeune fille:
+                </div>
+                <div id="customer_maiden_name" class="customer-input">
+                    <input placeholder="Nom de jeune fille"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Prénoms:
+                </div>
+                <div id="customer_first_name" class="customer-input">
+                    <input placeholder="Prénom"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Rue:
+                </div>
+                <div id="customer_street" class="customer-input">
+                    <input placeholder="Rue..."/><br/>
+                </div>
+                <div class="customer-label">
+
+                </div>
+                <div id="customer_street2" class="customer-input">
+                    <input placeholder="Rue..."/><br/>
+                </div>
+                <div class="customer-label">
+                    Code postal:
+                </div>
+                <div id="customer_zip" class="customer-input">
+                    <input placeholder="Code postal"/><br/>
+                </div>
+                <div class="customer-label">
+                    Ville:
+                </div>
+                <div id="customer_city" class="customer-input">
+                    <input placeholder="Ville"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Date de naissance:
+                </div>
+                <div id="customer_birth_date" class="customer-input">
+                    <input placeholder="Date de naissance" type="date"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Lieu de naissance:
+                </div>
+                <div id="customer_birth_location" class="customer-input">
+                    <input placeholder="Lieu naissance"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Téléphone:
+                </div>
+                <div id="customer_phone" class="customer-input">
+                    <input placeholder="Téléphone"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    Mobile:
+                </div>
+                <div id="customer_mobile" class="customer-input">
+                    <input placeholder="Mobile"/><br/>
+                </div>
+                <br/>
+                <div class="customer-label">
+                    email:
+                </div>
+                <div id="customer_email" class="customer-input">
+                    <input placeholder="Email"/><br/>
+                </div>
+                <div id="customer_id">
+                    <input placeholder="Id" type="hidden"/><br/>
+                </div>
+            </div>
+            <div id="customer-cancel" class = "button cancel">
+                Cancel
+            </div>
+            <div id="customer-confirm-create" class="button confirm">
+                Validate
+            </div>
+        </div>
+        </div>
+    </t>
+
+
+    <t t-name="CustomerListWidget">
+        <div class='customer-list-container'>
+            <div class="customer-list-scroller">
+                <table id="customers-screen-ol" class="customer-list">
+                </table>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="CustomerWidget">
+        <tr class='customer' onclick="document.location.href='#'">
+             <!-- onclick="document.location.href='#'" -->
+                <td>
+                    <!-- <a href="#"> -->
+                    <span class="customer-field customer-name">
+                        <t t-esc="widget.model.get('name')"/> <t t-esc="widget.model.get('first_name')"/>
+                    </span>
+                    <!-- </a> -->
+                </td>
+                <td>
+                    <!-- <a href="#"> -->
+                    <span class="customer-field">
+                        <t t-if="widget.model.get('email')">
+                            <t t-esc="widget.model.get('email')"/>
+                        </t>
+                    </span>
+                    <!-- </a> -->
+                </td>
+                <td>
+                    <!-- <a href="#"> -->
+                    <span class="customer-field customer-date">
+                        <t t-if="widget.model.get('birth_date')">
+                            <t t-esc="widget.get_birth_date()"/>
+                        </t>
+                    </span>
+                    <!-- </a> -->
+                </td>
+                <td>
+                    <!-- <a href="#"> -->
+                    <span class="customer-field customer-location">
+                        <t t-if="widget.model.get('birth_location')">
+                            <t t-esc="widget.model.get('birth_location')"/>
+                        </t>
+                    </span>
+                    <!-- </a> -->
+                </td>
+        </tr>
+    </t>
+
+    <t t-name="SetMatriculePopupWidget">
+        <div class="modal-dialog">
+            <div class="popup-selection">
+                <div class="matricule-container">
+                    <div class=".matricule-img">
+                        <img src="/point_of_sale/static/src/img/icons/scan.svg" height="100px" alt="image matricule" />
+                    </div>
+                    <br/>
+                    <div class="matricule-title">
+                        Veuillez saisir le matricule de l'arme: <span id="weapon_name"></span>
+                    </div>
+                    <br/>
+                    <div class="matricule-input">
+                        <input placeholder="Matricule" id="matricule-input"/>
+                    </div>
+                </div>
+
+                <div id="customer-cancel" class = "button cancel">
+                    Cancel
+                </div>
+
+                <div id="matricule-validate" class="button validate">
+                    Validate
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend="Orderline">
+        <t t-jquery=".info" t-operation="after">
+            <t t-if="line.get_matricule() != false">
+                <li class="info">
+                    <b>Matricule:</b> <t t-esc="line.get_product().weapon_matricule_number"/>
+                </li>
+            </t>
+        </t>
+    </t>
+
+
+    <t t-name="Product">
+        <span class='product' t-att-data-product-id="product.id">
+            <div class="product-img">
+                <img t-att-src='image_url' />
+                <t t-if="!product.to_weight">
+                    <span class="price-tag">
+                        <t t-esc="widget.format_currency(product.price)"/>
+                    </span>
+
+                </t>
+                <t t-if="product.to_weight">
+                    <span class="price-tag">
+                        <t t-esc="widget.format_currency(product.price)+'/Kg'"/>
+                    </span>
+                </t>
+                <!-- HACK nouveau tag pour quantité-->
+                <span class="qty-tag">
+                    <t t-esc="product.qty_available + ' ' + product.uom_id[1]"/>
+                </span>
+            </div>
+            <div class="product-name">
+                <t t-esc="product.name"/>
+            </div>
+        </span>
+    </t>
+
+
+
+
+</templates>

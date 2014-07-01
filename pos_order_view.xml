@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+     <record model="ir.ui.view" id="view_pos_pos_form_matricule">
+            <field name="name">pos.order.matricule</field>
+            <field name="model">pos.order</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+            <field name="arch" type="xml">
+                <field name="price_subtotal_incl" position="after">
+                    <field name="weapon_matricule"/>
+                </field>
+            </field>
+    </record>
+
+    </data>
+</openerp>
